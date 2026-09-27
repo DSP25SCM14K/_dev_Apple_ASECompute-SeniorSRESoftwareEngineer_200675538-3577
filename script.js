@@ -1,0 +1,31 @@
+const projects = [
+  {name:'Keystone',type:'CONTROL PLANE',desc:'Transactional key-value store for Kubernetes control-plane metadata with MVCC, Raft replication, and etcd-style watches.',tags:'GO · RAFT · GRPC · KUBERNETES · PROMETHEUS',src:'https://github.com/devthedevil/keystone'},
+  {name:'Voting App',type:'PLATFORM RELIABILITY',desc:'Multi-tenant Kubernetes deployment with namespace isolation, self-healing workloads, HPA, and Prometheus alerting.',tags:'KUBERNETES · GO · HELM · DOCKER · CI/CD',src:'https://github.com/devthedevil/Kubernetes-K8'},
+  {name:'Real-time Stock Market Analysis Pipeline',type:'DATA SYSTEMS',desc:'Streaming market data pipeline for real-time analysis and operational visibility.',tags:'STREAMING · DATA PIPELINE · ANALYTICS',src:'https://github.com/devthedevil/Realtime-Stock-Market-Analysis'},
+  {name:'CME MDP 3.0 Multicast Feed Handler',type:'LOW-LATENCY SYSTEMS',desc:'C++ multicast market-data feed handler focused on efficient message processing.',tags:'C++ · MULTICAST · MARKET DATA',src:'https://github.com/devthedevil/CME-Multicast-Market-Data-Feed-Handler-C-'},
+  {name:'Character Device Driver',type:'LINUX SYSTEMS',desc:'Linux character device driver project exploring kernel interfaces and device I/O.',tags:'C · LINUX KERNEL · DEVICE DRIVER',src:'https://github.com/devthedevil/Character-Device-Driver'},
+  {name:'EXPOS — Experimental Operating System',type:'OPERATING SYSTEMS',desc:'An experimental OS project for exploring core operating-system behavior and low-level systems.',tags:'C · OS · SYSTEMS PROGRAMMING',src:'https://github.com/devthedevil/EXPOS'},
+  {name:'16-Bit RISC Processor',type:'COMPUTER ARCHITECTURE',desc:'A 16-bit RISC processor implementation built as a hardware lab project.',tags:'DIGITAL DESIGN · PROCESSOR · HARDWARE',src:'https://github.com/devthedevil/Hardware-lab'},
+  {name:'Strata',type:'STORAGE SYSTEMS',desc:'C++ storage server project focused on storage service fundamentals.',tags:'C++ · STORAGE SERVER',src:'https://github.com/devthedevil/strata'},
+  {name:'Oxide-HV',type:'VIRTUALIZATION',desc:'Rust hypervisor project with a live project experience.',tags:'RUST · HYPERVISOR · VIRTUALIZATION',src:'https://github.com/devthedevil/oxide-hv',demo:'https://oxide-hv.vercel.app/'},
+  {name:'MetalCompositor',type:'COMPUTE & GRAPHICS',desc:'A compositor built around Apple Metal, exploring low-level graphics and rendering.',tags:'SWIFT · METAL · GRAPHICS',src:'https://github.com/devthedevil/metal-compositor'},
+  {name:'TradeSentinel',type:'OBSERVABILITY PRODUCT',desc:'A live market-focused application with a public demo and source repository.',tags:'MARKET SYSTEMS · WEB APP',src:'https://github.com/devthedevil/tradesentinel',demo:'https://tradesentinel.vercel.app/'},
+  {name:'AskMyStore',type:'AGENT ORCHESTRATION',desc:'Store assistant using LangGraph orchestration, connected to a live demo.',tags:'LANGGRAPH · LLM · ORCHESTRATION',src:'https://github.com/devthedevil/AskMyStore',demo:'https://ask-my-store.vercel.app/'},
+  {name:'LangChain Chat with Search',type:'AI SYSTEMS',desc:'A search-enabled conversational application built with LangChain.',tags:'LANGCHAIN · SEARCH · LLM',src:'https://github.com/devthedevil/LangChain-Chat-with-Search'},
+  {name:'AgentFlow',type:'AGENT ORCHESTRATION',desc:'Agent orchestration project built with the OpenAI Agent SDK.',tags:'AGENTS · ORCHESTRATION · SDK',src:'https://github.com/devthedevil/openAI-Agent-SDK'},
+  {name:'AgentEval',type:'AI QUALITY',desc:'Evaluation tooling for Swift-based agent workflows.',tags:'SWIFT · AGENT EVALUATION',src:'https://github.com/devthedevil/swift-agent-evals'},
+  {name:'MCP',type:'DEVELOPER TOOLING',desc:'A Model Context Protocol project exploring connected tools and context.',tags:'MCP · TOOLING · INTEGRATION',src:'https://github.com/devthedevil/MCP'},
+  {name:'AeroInvoice',type:'AI AUTOMATION',desc:'AI-powered invoice ingestion and quote extraction API.',tags:'AI · DOCUMENT PROCESSING · API',src:'https://github.com/devthedevil/aero-invoice-intelligence'},
+  {name:'adserve',type:'DISTRIBUTED APPLICATIONS',desc:'An ad-serving system project.',tags:'BACKEND · SYSTEMS',src:'https://github.com/devthedevil/adserve'},
+  {name:'Strangers',type:'FULL-STACK APPLICATION',desc:'A web application with a public live demo.',tags:'REACT · WEB APP',src:'https://github.com/devthedevil/Strangers',demo:'https://strangers-react.vercel.app/'},
+  {name:'Hire Loop',type:'PRODUCT ENGINEERING',desc:'A hiring workflow application project.',tags:'WEB APP · PRODUCT ENGINEERING',src:'https://github.com/devthedevil/hireloop'},
+  {name:'Pitch Perfect',type:'IOS APPLICATION',desc:'An iOS application project.',tags:'IOS · SWIFT',src:'https://github.com/devthedevil/Pitch_Perfect'},
+  {name:'Tic Tac Toe',type:'ANDROID APPLICATION',desc:'An Android implementation of the classic strategy game.',tags:'ANDROID · MOBILE',src:'https://github.com/devthedevil/TicTacToe-Game'}
+];
+const grid=document.querySelector('#projectGrid');
+grid.innerHTML=projects.map((p,i)=>`<article class="project-card"><div class="project-top"><span class="project-type">${p.type}</span><span class="project-index">${String(i+1).padStart(2,'0')}</span></div><h3>${p.name}</h3><p>${p.desc}</p><div class="tags">${p.tags}</div><div class="project-links"><a href="${p.src}" target="_blank" rel="noreferrer">SourceCode <span>↗</span></a>${p.demo?`<a href="${p.demo}" target="_blank" rel="noreferrer">Technical Demo <span>↗</span></a>`:''}</div></article>`).join('');
+const rotations=['reliable compute at every layer','automated recovery over toil','safe change at production scale','clear signals from complex systems'];
+const rotating=document.querySelector('#rotatingText');let index=0;
+setInterval(()=>{rotating.classList.add('fade');setTimeout(()=>{index=(index+1)%rotations.length;rotating.textContent=rotations[index];rotating.classList.remove('fade')},260)},3100);
+const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in-view');io.unobserve(entry.target)}}),{threshold:.12});
+document.querySelectorAll('.experience,.project-card,.principles>div,.publication-card').forEach(el=>{el.classList.add('reveal');io.observe(el)});

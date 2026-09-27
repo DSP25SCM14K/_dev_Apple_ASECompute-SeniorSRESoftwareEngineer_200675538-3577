@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b10"><meta name="description" content="Dev Kumar — Senior SRE and Kubernetes platform engineer building dependable compute infrastructure.">
+  <title>Dev Kumar — Systems that stay ready</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient-photo"></div><div class="ambient-grid"></div>
+    <svg class="ambient-flow" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+      <defs><linearGradient id="flow" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#59e7c4" stop-opacity="0"/><stop offset=".45" stop-color="#59e7c4" stop-opacity=".85"/><stop offset="1" stop-color="#78a8ff" stop-opacity=".1"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+      <g class="rack-lines"><path d="M900 90h260v120h-160v90h330v140h-170v110h260"/><path d="M815 160h-140v180h-190v130h200v170h-150v180h320"/><path d="M1070 320h-150v110h-110v180h140v180h260"/><path d="M1250 90v95h180v180h-100v170h160"/></g>
+      <g class="nodes"><circle cx="900" cy="90" r="5"/><circle cx="1160" cy="210" r="5"/><circle cx="1000" cy="300" r="5"/><circle cx="1330" cy="440" r="5"/><circle cx="960" cy="320" r="5"/><circle cx="485" cy="470" r="5"/><circle cx="685" cy="340" r="5"/><circle cx="685" cy="680" r="5"/><circle cx="920" cy="500" r="5"/><circle cx="1050" cy="680" r="5"/></g>
+      <g class="packets"><circle r="4"><animateMotion dur="8s" repeatCount="indefinite" path="M900 90h260v120h-160v90h330"/></circle><circle r="3"><animateMotion dur="11s" repeatCount="indefinite" path="M815 160h-140v180h-190v130h200"/></circle><circle r="3"><animateMotion dur="9s" repeatCount="indefinite" path="M1070 320h-150v110h-110v180h140"/></circle></g>
+    </svg><div class="ambient-shade"></div>
+  </div>
+  <header class="topbar"><a class="brand" href="#top" aria-label="Dev Kumar, home"><span class="brand-mark">DK</span><span>DEV KUMAR <i> / SYSTEMS &amp; RELIABILITY</i></span></a><nav><a href="#work">Work</a><a href="#systems">Approach</a><a href="#projects">Builds</a><a href="#contact">Contact</a></nav><a class="availability" href="mailto:devkumar.dklv@gmail.com"><span></span> Let’s connect</a></header>
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-copy"><p class="eyebrow"><span class="pulse"></span> SENIOR SRE · KUBERNETES PLATFORM</p><h1>Systems that<br>stay <em>ready.</em></h1><p class="hero-lead">I build the control planes and operational tools behind dependable services — from bare metal and Linux to Kubernetes and cloud.</p>
+        <div class="rotating-line"><span class="mono">CURRENT FOCUS</span><strong id="rotatingText">reliable compute at every layer</strong><b class="cursor">_</b></div>
+        <div class="hero-actions"><a class="button primary" href="#work">Explore the work <span>↘</span></a><a class="text-link" href="https://github.com/devthedevil" target="_blank" rel="noreferrer">GitHub profile <span>↗</span></a></div>
+        <div class="hero-metrics"><div><strong>8<span>+</span></strong><small>years building<br>production systems</small></div><div><strong>99.99<span>%</span></strong><small>availability<br>delivered</small></div><div><strong>60<span>%</span></strong><small>faster<br>deployments</small></div></div>
+      </div>
+      <div class="hero-art" aria-label="Animated illustration of interconnected compute nodes and data flows"><div class="art-label mono">COMPUTE FABRIC <span>● OPERATIONAL</span></div><div class="core"><div class="core-orbit orbit-a"></div><div class="core-orbit orbit-b"></div><div class="core-center"><span>CONTROL<br>PLANE</span><b>⌘</b></div></div>
+        <div class="node node-a"><i>01</i><b>API</b><small>reconcile</small></div><div class="node node-b"><i>02</i><b>WORKERS</b><small>schedule</small></div><div class="node node-c"><i>03</i><b>OBSERVE</b><small>measure</small></div><div class="node node-d"><i>04</i><b>RECOVER</b><small>self-heal</small></div><div class="art-foot mono">DESIRED STATE <span>→</span> OBSERVED STATE <span>→</span> RELIABLE SERVICE</div></div>
+      <a class="scroll-hint mono" href="#work">SCROLL TO EXPLORE <span>↓</span></a>
+    </section>
+    <section class="proof-strip"><div class="wrap proof-inner"><span class="mono">BUILT ACROSS</span><div>Kubernetes <i>·</i> Linux <i>·</i> Go <i>·</i> Bare metal <i>·</i> AWS <i>·</i> GCP <i>·</i> Azure</div></div></section>
+    <section class="section wrap" id="work"><div class="section-heading"><div><p class="eyebrow">01 / EXPERIENCE</p><h2>Reliability is an<br><em>engineering outcome.</em></h2></div><p class="section-intro">I work across software, infrastructure, and operations to make complex platforms easier to run and safer to change.</p></div>
+      <div class="experience-list">
+        <article class="experience"><div class="exp-meta"><span class="mono">MAR 2025 — NOW</span><span>CHICAGO, IL</span></div><div class="exp-body"><div class="exp-title"><h3>Sprouts AI</h3><span>Software Engineer · Senior SRE / Kubernetes Platform</span></div><ul>
+          <li>Owned technical direction for Go Kubernetes controllers automating namespace management and deployment lifecycle, cutting tenant onboarding from days to minutes using reconciliation loops, informers, work queues, and leader election.</li>
+          <li>Set SLOs, error budgets, and alerting philosophy on Prometheus and Thanos, reducing alert noise by 60% and MTTR by 45% by replacing symptom-based paging with SLO burn-rate alerts and runbooks.</li>
+          <li>Cut repeat incidents by 70% by leading on-call response to etcd latency and containerd hangs, debugging network, OS, and container runtime with tcpdump, perf, and eBPF, and shipping post-incident fixes.</li>
+          <li>Completed 12 Kubernetes upgrades with 0 customer-facing incidents by designing a rollout strategy with canary node pools and automated rollback across AWS EKS and bare-metal.</li>
+          <li>Cut on-call triage time by 50% by building AI-assisted tooling in Go with LLMs and MCP that correlates Splunk logs, Prometheus metrics, and Kubernetes events.</li>
+          <li>Shaped 3 platform roadmap initiatives by tracking upstream Kubernetes SIG design proposals and advising partner service teams on platform capabilities and tradeoffs.</li>
+        </ul></div></article>
+        <article class="experience"><div class="exp-meta"><span class="mono">AUG 2023 — MAR 2025</span><span>CHICAGO, IL</span></div><div class="exp-body"><div class="exp-title"><h3>Resilience Inc</h3><span>Software Engineer · SRE / Kubernetes Infrastructure</span></div><ul>
+          <li>Reduced manual operational effort by 65% by building Go operators that reconcile desired versus observed state for stateful services, speeding recovery from transient infrastructure failures.</li>
+          <li>Achieved 99.95% availability running Kubernetes as an internal managed service with SLAs for 15+ teams by standardizing namespace templates, PodDisruptionBudgets, and quotas.</li>
+          <li>Cut configuration drift incidents by 80% and node provisioning time by 70% by automating configuration management for 800+ Linux nodes with Puppet, Ansible, and Terraform.</li>
+          <li>Reduced MTTR by 40% in 24/7 on-call by diagnosing TCP retransmissions, CoreDNS saturation, and socket exhaustion with tcpdump and netstat, then codifying fixes into runbooks.</li>
+          <li>Raised team throughput by 35% by mentoring engineers through design and code review, and led a cross-functional effort to standardize environments with infrastructure-as-code.</li>
+        </ul></div></article>
+        <article class="experience"><div class="exp-meta"><span class="mono">APR 2018 — AUG 2023</span><span>INDIA</span></div><div class="exp-body"><div class="exp-title"><h3>Tata Steel</h3><span>Software Engineer · SRE / Infrastructure</span></div><ul>
+          <li>Cut server turn-up from days to hours by automating PXE bare-metal provisioning, OS configuration, and cluster bootstrap with Puppet and Ansible across datacenter servers.</li>
+          <li>Achieved 99.99% availability and 40% faster API response by designing containerized microservices on Kubernetes and OpenShift and optimizing backend service performance.</li>
+          <li>Delivered 60% faster deployments by building Jenkins and GitHub Actions CI/CD with Docker automation on AWS, GCP, and Azure.</li>
+          <li>Reduced recurring incidents by 50% by building Prometheus and Splunk observability and owning on-call through post-mortem.</li>
+          <li>Improved p99 latency by 40% by profiling CPU, memory, and I/O with perf and strace and tuning NUMA, cgroups, and kernel settings.</li>
+        </ul></div></article>
+      </div>
+    </section>
+    <section class="systems-section" id="systems"><div class="wrap systems-wrap"><div class="section-heading"><div><p class="eyebrow">02 / HOW I THINK</p><h2>Observe deeply.<br><em>Improve continuously.</em></h2></div><p class="section-intro">Reliable platforms come from a tight feedback loop between intent, system behavior, and engineering action.</p></div>
+      <div class="loop-diagram"><svg viewBox="0 0 1000 330" role="img" aria-label="Reliability feedback loop: define intent, reconcile state, observe signals, and learn from incidents"><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0L8 4 0 8" fill="none" stroke="#6ce5c4" stroke-width="1.5"/></marker></defs><path class="loop-path" d="M180 150 C280 45 420 45 500 150 S720 255 820 150 S720 45 500 150 S280 255 180 150" marker-end="url(#arrow)"/><circle class="moving-dot" r="5"><animateMotion dur="12s" repeatCount="indefinite" path="M180 150 C280 45 420 45 500 150 S720 255 820 150 S720 45 500 150 S280 255 180 150"/></circle></svg>
+        <div class="loop-step step-one"><b>01</b><strong>Define intent</strong><small>SLOs · capacity · policy</small></div><div class="loop-step step-two"><b>02</b><strong>Reconcile state</strong><small>controllers · automation</small></div><div class="loop-step step-three"><b>03</b><strong>Observe signals</strong><small>metrics · logs · traces</small></div><div class="loop-step step-four"><b>04</b><strong>Learn &amp; harden</strong><small>incidents · runbooks · fixes</small></div><div class="loop-center"><span class="mono">RELIABILITY</span><b>∿</b></div></div>
+      <div class="principles"><div><span class="mono">01</span><h3>Automate the repeatable</h3><p>Controllers and clear desired state reduce toil while making recovery predictable.</p></div><div><span class="mono">02</span><h3>Debug from the signal</h3><p>Metrics, packet traces, kernel tools, and context point toward root cause.</p></div><div><span class="mono">03</span><h3>Make change reversible</h3><p>Canaries, staged rollouts, and rollback paths keep upgrades uneventful.</p></div></div>
+    </div></section>
+    <section class="section wrap" id="projects"><div class="section-heading"><div><p class="eyebrow">03 / SELECTED BUILDS</p><h2>Curiosity with<br><em>systems underneath.</em></h2></div><p class="section-intro">From control-plane data and kernel drivers to live market systems and AI agents, each project is a chance to understand a layer more deeply.</p></div><div class="project-grid" id="projectGrid"></div></section>
+    <section class="section publication-section"><div class="wrap publication-card"><div><p class="eyebrow">04 / RESEARCH &amp; LEARNING</p><h2>Ideas tested<br><em>in practice.</em></h2><p>Comparative Study of Movie Recommendation Systems using Feature Engineering</p><span class="mono">IEEE PUBLICATION</span></div><div class="pub-links"><a href="https://ieeexplore.ieee.org/document/10094480" target="_blank" rel="noreferrer">Read the paper <b>↗</b></a><a href="https://github.com/devthedevil/Comparative-Study-of-Movie-Recommendation-System/blob/main/Netflix_Movie.ipynb" target="_blank" rel="noreferrer">Explore source notebook <b>↗</b></a><a href="https://drive.google.com/file/d/1rayr6Cht6quyLUJOXWOAcBi_rxQp2Ol0/view" target="_blank" rel="noreferrer">View certificate <b>↗</b></a></div></div></section>
+    <section class="contact-section wrap" id="contact"><p class="eyebrow">05 / GET IN TOUCH</p><h2>Let’s make the<br><em>complex dependable.</em></h2><div class="contact-bottom"><a class="email-link" href="mailto:devkumar.dklv@gmail.com">devkumar.dklv@gmail.com <span>↗</span></a><div class="social-links"><a href="https://github.com/devthedevil" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://scholar.google.com/citations?user=VXIu5a4AAAAJ&amp;hl=en" target="_blank" rel="noreferrer">Google Scholar ↗</a><a href="https://leetcode.com/u/dev_kumar_dklv/" target="_blank" rel="noreferrer">LeetCode ↗</a></div></div></section>
+  </main>
+  <script src="script.js"></script>
+</body></html>
